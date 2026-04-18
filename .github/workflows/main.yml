@@ -1,0 +1,20 @@
+name: IGIHECYUBUNTU REACT APP CI/CD - Frontend
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+      - uses: actions/checkout@v4
+      
+      - run: |
+          mkdir -p    /home/administrator/apps_backup/sitsltd/sitsltd_frontend
+          rm -r      /home/administrator/apps_backup/sitsltd/sitsltd_frontend/* 2>/dev/null || true
+          cp -rf dist/ /home/administrator/apps_backup/sitsltd/sitsltd_frontend/
+          /bin/bash   /home/administrator/autodiployments/deployRubavuFrontend.sh frontend sitsltd_frontend
+          
