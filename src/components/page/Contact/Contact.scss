@@ -1,0 +1,26 @@
+@use '../../../Styles/variables' as v;
+@use '../../../Styles/mixins' as m;
+
+.contact-page {
+  background-color: v.$white;
+
+  &__hero {
+    background-color: v.$brand-navy;
+    color: v.$white;
+    padding: 3.5rem 0;
+
+    h1 { font-weight: 700; margin-bottom: 0.5rem; }
+    p  { opacity: 0.8; font-size: v.$font-size-lg; }
+  }
+
+  &__form {
+    @include m.card;
+    border: 1px solid v.$border-color;
+    padding: 2rem;
+
+    .form-label {
+      font-weight: 600;
+      font-size: v.$font-size-sm;
+    }
+  }
+}

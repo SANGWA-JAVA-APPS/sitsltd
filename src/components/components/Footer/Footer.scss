@@ -1,0 +1,53 @@
+@use '../../../Styles/variables' as v;
+@use '../../../Styles/mixins' as m;
+
+.footer {
+  background-color: v.$brand-navy;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 3rem 0 1.5rem;
+  font-family: v.$font-family-base;
+
+  &__heading {
+    color: v.$brand-gold;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.75rem;
+  }
+
+  &__text {
+    font-size: v.$font-size-sm;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.75);
+  }
+
+  &__links {
+    li {
+      margin-bottom: 0.4rem;
+    }
+
+    a {
+      color: rgba(255, 255, 255, 0.75);
+      font-size: v.$font-size-sm;
+      text-decoration: none;
+      transition: v.$transition-base;
+
+      &:hover,
+      &.active {
+        color: v.$brand-gold;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__divider {
+    border-color: rgba(255, 255, 255, 0.15);
+    margin: 1.5rem 0 1rem;
+  }
+
+  &__copy {
+    font-size: v.$font-size-sm;
+    color: rgba(255, 255, 255, 0.5);
+  }
+}

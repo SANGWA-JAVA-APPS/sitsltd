@@ -1,0 +1,23 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+// ─── Global resets & base ────────────────────────────────────────────────────
+body {
+  font-family: v.$font-family-base;
+  background-color: v.$white;
+  color: v.$font-color-base;
+}
+
+a {
+  color: v.$primary;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// ─── Page wrapper ─────────────────────────────────────────────────────────────
+.page-wrapper {
+  min-height: calc(100vh - 60px);
+  background-color: v.$white;
+}

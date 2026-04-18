@@ -1,0 +1,52 @@
+@use '../../../Styles/variables' as v;
+@use '../../../Styles/mixins' as m;
+
+.reusable-table {
+  @include m.card;
+
+  &__filter {
+    margin-bottom: v.$spacer;
+
+    input {
+      max-width: 340px;
+    }
+  }
+
+  &__sortable {
+    cursor: pointer;
+    user-select: none;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  &__sort-icon {
+    font-size: 0.75rem;
+    opacity: 0.7;
+    margin-left: 4px;
+  }
+
+  &__pagination {
+    @include m.flex-between;
+    margin-top: v.$spacer;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  &__pager {
+    @include m.flex-center;
+    gap: 0.5rem;
+  }
+
+  &__page-info {
+    font-size: v.$font-size-sm;
+    color: v.$secondary;
+    min-width: 60px;
+    text-align: center;
+  }
+
+  &__count {
+    font-size: v.$font-size-sm;
+  }
+}

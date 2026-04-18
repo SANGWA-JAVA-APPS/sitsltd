@@ -1,0 +1,42 @@
+// ─── Brand Colors ────────────────────────────────────────────────────────────
+$brand-navy:  #1a2b4a;
+$brand-gold:  #f5a623;
+
+// ─── Bootstrap-aligned palette ───────────────────────────────────────────────
+$primary:   #0d6efd;
+$secondary: #6c757d;
+$success:   #198754;
+$danger:    #dc3545;
+$warning:   #ffc107;
+$info:      #0dcaf0;
+$light:     #f8f9fa;
+$dark:      #212529;
+$white:     #ffffff;
+
+// ─── Typography ──────────────────────────────────────────────────────────────
+$font-family-base: Arial, Helvetica, sans-serif;
+$font-color-base:  #000000;
+$font-size-base:   1rem;
+$font-size-sm:     0.875rem;
+$font-size-lg:     1.25rem;
+
+// ─── Spacing ─────────────────────────────────────────────────────────────────
+$spacer: 1rem;
+
+// ─── Borders ─────────────────────────────────────────────────────────────────
+$border-radius:    0.375rem;
+$border-radius-lg: 0.5rem;
+$border-color:     #dee2e6;
+
+// ─── Shadows ─────────────────────────────────────────────────────────────────
+$box-shadow:    0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+$box-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+
+// ─── Breakpoints ─────────────────────────────────────────────────────────────
+$bp-sm:  576px;
+$bp-md:  768px;
+$bp-lg:  992px;
+$bp-xl:  1200px;
+
+// ─── Transitions ─────────────────────────────────────────────────────────────
+$transition-base: all 0.2s ease-in-out;

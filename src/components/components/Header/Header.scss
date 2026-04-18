@@ -1,0 +1,41 @@
+@use '../../../Styles/variables' as v;
+@use '../../../Styles/mixins' as m;
+
+.header {
+  background-color: v.$brand-navy;
+  padding: 0.75rem 0;
+  box-shadow: v.$box-shadow-sm;
+
+  &__brand {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: v.$white !important;
+    letter-spacing: 0.5px;
+    transition: v.$transition-base;
+
+    &:hover {
+      color: v.$brand-gold !important;
+      text-decoration: none;
+    }
+  }
+
+  .nav-link {
+    color: rgba(255, 255, 255, 0.85) !important;
+    font-size: v.$font-size-sm;
+    padding: 0.5rem 1rem;
+    transition: v.$transition-base;
+
+    &:hover,
+    &.active {
+      color: v.$brand-gold !important;
+    }
+  }
+
+  .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.3);
+
+    .navbar-toggler-icon {
+      filter: invert(1);
+    }
+  }
+}

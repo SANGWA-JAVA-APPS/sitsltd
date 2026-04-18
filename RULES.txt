@@ -1,0 +1,42 @@
+
+FRONTEND RULES
+
+- While adding any page or feature , makesure that you inspecting the existing components and see if you can re use them
+- In case i tell you create an additional folder please ask me as it will potentially change the basic structure.
+- reusability should be applied to scss styles, components and all other that can be reused
+- 
+Design
+---------------
+	Technology: 
+		- Reactjs the latest, javascript, jsx files
+		- Styling: Bootstrap first then .Scss mixins and variables, nesting from root of each page
+		- vite
+		- building pnpm
+		- React: 
+			- routing (latest best way, but simple) where possible and necesary
+			- the centralized states, you should choose: React Context API where possible and necesary
+		
+	File structure:
+		- Components
+			- page
+				- Home as example, all pages should be here
+
+			- components (reusable components)
+				- Header
+				- Table to display data (filterble, pagination 5 min with prev and nex)
+					table they should be filterable and sortable.
+				- Jobs
+		- Styles
+		- Apis
+		- Confs
+
+
+
+BACKEND RULES
+-------------
+1. dont create a file without checking of there is a file with the same functionality.
+2. use the existing structure first
+3. use reusability with OOPS principles wherever possible
+4. All strings should be create in a single location of a class.
+5. Use inheritance wherever possible
+6. 

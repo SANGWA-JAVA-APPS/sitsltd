@@ -1,0 +1,172 @@
+@use '../../../Styles/variables' as v;
+@use '../../../Styles/mixins' as m;
+
+.home {
+
+  // ── Hero / Slider ─────────────────────────────────────────────────────
+  &__hero {
+    background-color: v.$brand-navy;
+    color: v.$white;
+    overflow: hidden;
+    width: 100%;
+
+    &-inner {
+      @include m.flex-between;
+      min-height: 480px;
+      gap: 2rem;
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+
+      @media (max-width: v.$bp-md) {
+        flex-direction: column;
+        text-align: center;
+        min-height: auto;
+      }
+    }
+
+    &-text {
+      flex: 0 0 50%;
+      max-width: 50%;
+
+      @media (max-width: v.$bp-md) {
+        flex: unset;
+        max-width: 100%;
+      }
+    }
+
+    &-title {
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+    }
+
+    &-sub {
+      font-size: v.$font-size-lg;
+      opacity: 0.85;
+      max-width: 480px;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+
+      @media (max-width: v.$bp-md) {
+        max-width: 100%;
+      }
+    }
+
+    &-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+
+      @media (max-width: v.$bp-md) {
+        justify-content: center;
+      }
+    }
+
+    &-img-wrap {
+      flex: 0 0 45%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      @media (max-width: v.$bp-md) {
+        display: none;
+      }
+    }
+
+    &-img {
+      width: 100%;
+      max-width: 460px;
+      height: auto;
+      border-radius: v.$border-radius-lg;
+      object-fit: cover;
+    }
+  }
+
+  // ── Stats ─────────────────────────────────────────────────────────────
+  &__stats {
+    background-color: v.$white;
+    border-bottom: 1px solid v.$border-color;
+  }
+
+  &__stat-card {
+    @include m.card;
+    @include m.hover-lift;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  &__stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: v.$brand-navy;
+  }
+
+  &__stat-label {
+    font-size: v.$font-size-sm;
+    color: v.$secondary;
+  }
+
+  // ── Section headings ──────────────────────────────────────────────────
+  &__section-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: v.$brand-navy;
+  }
+
+  &__section-sub {
+    font-size: v.$font-size-base;
+  }
+
+  // ── Services ──────────────────────────────────────────────────────────
+  &__services {
+    background-color: v.$light;
+  }
+
+  &__service-card {
+    @include m.card;
+    @include m.hover-lift;
+    text-align: center;
+    padding: 2rem 1.5rem;
+    border: 1px solid v.$border-color;
+    background-color: v.$white;
+
+    &-icon  { font-size: 2.5rem; display: block; margin-bottom: 1rem; }
+    &-title { font-weight: 700; color: v.$brand-navy; margin-bottom: 0.5rem; }
+    &-desc  { font-size: v.$font-size-sm; color: v.$secondary; }
+  }
+
+  // ── Clients ───────────────────────────────────────────────────────────
+  &__clients {
+    background-color: v.$white;
+    border-top: 1px solid v.$border-color;
+  }
+
+  &__client-logo {
+    @include m.flex-center;
+    width: 120px;
+    height: 80px;
+    border: 2px dashed v.$border-color;
+    border-radius: v.$border-radius;
+    background-color: v.$light;
+    transition: v.$transition-base;
+
+    &:hover {
+      border-color: v.$brand-gold;
+      background-color: rgba(245, 166, 35, 0.05);
+    }
+  }
+
+  &__client-placeholder {
+    font-size: v.$font-size-sm;
+    color: v.$secondary;
+    font-weight: 600;
+  }
+
+  // ── Jobs section ──────────────────────────────────────────────────────
+  &__jobs {
+    background-color: v.$light;
+    border-top: 1px solid v.$border-color;
+  }
+}

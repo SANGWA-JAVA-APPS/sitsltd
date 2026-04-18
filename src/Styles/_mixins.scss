@@ -1,0 +1,46 @@
+@use 'variables' as v;
+
+// ─── Responsive breakpoints ───────────────────────────────────────────────────
+@mixin respond-to($bp) {
+  @if    $bp == 'sm' { @media (min-width: v.$bp-sm) { @content; } }
+  @else if $bp == 'md' { @media (min-width: v.$bp-md) { @content; } }
+  @else if $bp == 'lg' { @media (min-width: v.$bp-lg) { @content; } }
+  @else if $bp == 'xl' { @media (min-width: v.$bp-xl) { @content; } }
+}
+
+// ─── Flex helpers ─────────────────────────────────────────────────────────────
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// ─── Card ─────────────────────────────────────────────────────────────────────
+@mixin card {
+  background: v.$white;
+  border-radius: v.$border-radius;
+  box-shadow: v.$box-shadow-sm;
+  padding: v.$spacer;
+}
+
+// ─── Hover lift ───────────────────────────────────────────────────────────────
+@mixin hover-lift {
+  transition: v.$transition-base;
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: v.$box-shadow;
+  }
+}
+
+// ─── Text truncate ───────────────────────────────────────────────────────────
+@mixin truncate {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
